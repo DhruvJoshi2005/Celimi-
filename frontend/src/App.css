@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1d2951 0%, #2a3f70 50%, #1d2951 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" /></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23glow)"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="url(%23glow)"><animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" begin="1s"/></circle><circle cx="40" cy="70" r="1" fill="url(%23glow)"><animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" begin="2s"/></circle><circle cx="90" cy="80" r="1.2" fill="url(%23glow)"><animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite" begin="0.5s"/></circle><circle cx="10" cy="60" r="0.8" fill="url(%23glow)"><animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite" begin="1.5s"/></circle></svg>') repeat;
+  background-size: 400px 400px;
+  animation: floatingStars 20s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.main-content {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 100px 20px 60px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 30px;
+  color: #273485;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards;
+  position: relative;
+}
+
+.brand-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4ecdc4, #45b7d1, #4ecdc4, transparent);
+  animation: expandLine 1.5s ease-out 1.5s forwards;
+  box-shadow: 0 0 10px rgba(78, 205, 196, 0.6);
+}
+
+/* Hero Logo Styling and Animation */
+.hero-logo {
+  width: 210px;
+  height: auto;
+  margin: 20px 0;
+  opacity: 0;
+  transform: scale(0.8) translateY(30px);
+  animation: logoEntrance 1.5s ease-out 0.8s forwards;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.3));
+}
+
+.hero-logo:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0 0 30px rgba(78, 205, 196, 0.5));
+}
+
+.tagline {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px 0 30px 0;
+  color: #273485;
+  line-height: 1.4;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.6s forwards;
+  position: relative;
+}
+
+.tagline::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+  animation: expandLineLeft 1s ease-out 2s forwards;
+}
+
+.tagline::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+  animation: expandLineRight 1s ease-out 2s forwards;
+}
+
+/* Goggles Container and Animation */
+.goggles-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goggles-image {
+  width: 350px;
+  height: auto;
+  max-width: 90vw;
+  opacity: 0;
+  transform: scale(0.7) rotateY(15deg);
+  animation: glassesEntrance 2s ease-out 1.2s forwards;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.goggles-image:hover {
+  transform: scale(1.05) rotateY(-5deg) translateY(-10px);
+  filter: drop-shadow(0 15px 40px rgba(78, 205, 196, 0.4));
+}
+
+.coming-soon {
+  font-size: 2.5rem;
+  font-family: 'Galada', cursive;
+  margin: 30px 0;
+  color: #273485;
+  line-height: 2.3;
+  opacity: 0;
+  animation: elegantEntrance 1.8s ease-out 1s forwards;
+  position: relative;
+  cursor: default;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 20px rgba(241, 236, 255, 0.4);
+}
+
+.coming-soon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: breathingGlow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+.coming-soon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4ecdc4, #45b7d1, #4ecdc4, transparent);
+  animation: expandGlowLine 2s ease-out 2.5s forwards;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(78, 205, 196, 0.6);
+}
+
+.coming-soon:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 0 30px rgba(241, 236, 255, 0.6), 0 0 50px rgba(78, 205, 196, 0.3);
+  color: #ffffff;
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatingStars {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px) rotateY(15deg);
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(1.02) translateY(-5px) rotateY(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotateY(0deg);
+  }
+}
+
+@keyframes glassesEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotateY(15deg) translateY(50px);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.85) rotateY(8deg) translateY(20px);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scale(1.05) rotateY(-3deg) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg) translateY(0);
+  }
+}
+
+@keyframes elegantEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes expandLineLeft {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15px;
+  }
+}
+
+@keyframes expandLineRight {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15px;
+  }
+}
+
+@keyframes breathingGlow {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@keyframes expandGlowLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 150px;
+    opacity: 1;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .main-content {
+    padding: 120px 40px 80px;
+  }
+  
+  .brand-title {
+    font-size: 4rem;
+    letter-spacing: 20px;
+  }
+  
+  .hero-logo {
+    width: 200px;
+  }
+  
+  .tagline {
+    font-size: 2rem;
+  }
+  
+  .goggles-image {
+    width: 800px;
+  }
+  
+  .coming-soon {
+    font-size: 3rem;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .main-content {
+    padding: 100px 30px 60px;
+  }
+  
+  .brand-title {
+    font-size: 3.5rem;
+    letter-spacing: 15px;
+  }
+  
+  .hero-logo {
+    width: 170px;
+  }
+  
+  .tagline {
+    font-size: 1.8rem;
+  }
+  
+  .goggles-image {
+    width: 700px;
+  }
+  
+  .coming-soon {
+    font-size: 2.8rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main-content {
+    padding: 80px 25px 50px;
+  }
+  
+  .brand-title {
+    font-size: 2.8rem;
+    letter-spacing: 10px;
+  }
+  
+  .hero-logo {
+    width: 150px;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+  }
+  
+  .goggles-image {
+    width: 600px;
+  }
+  
+  .coming-soon {
+    font-size: 2.3rem;
+    margin: 25px 0;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) and (min-width: 481px) {
+  .main-content {
+    padding: 60px 20px 40px;
+  }
+  
+  .brand-title {
+    font-size: 2.2rem;
+    letter-spacing: 8px;
+  }
+  
+  .hero-logo {
+    width: 120px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .goggles-image {
+    width: 500px;
+  }
+  
+  .coming-soon {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) and (min-width: 321px) {
+  .main-content {
+    padding: 50px 15px 30px;
+  }
+  
+  .brand-title {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    line-height: 1.3;
+  }
+  
+  .hero-logo {
+    width: 100px;
+  }
+  
+  .tagline {
+    line-height: 1.2;
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .goggles-image {
+    width: 400px;
+  }
+  
+  .coming-soon {
+    line-height: 2.2;
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+  .main-content {
+    padding: 40px 12px 25px;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    line-height: 1.4;
+  }
+  
+  .hero-logo {
+    width: 180px;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+  
+  .goggles-image {
+    width: 200px;
+  }
+  
+  .coming-soon {
+    font-size: 1.6rem;
+    margin: 12px 0;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 280px) {
+  .main-content {
+    padding: 35px 10px 20px;
+  }
+  
+  .brand-title {
+    font-size: 1.3rem;
+    letter-spacing: 0;
+  }
+  
+  .hero-logo {
+    width: 160px;
+  }
+  
+  .tagline {
+    font-size: 0.8rem;
+  }
+  
+  .goggles-image {
+    width: 180px;
+  }
+  
+  .coming-soon {
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body::before,
+  .brand-title,
+  .tagline,
+  .hero-logo,
+  .goggles-image,
+  .coming-soon,
+  .coming-soon::before,
+  .coming-soon::after {
+    animation: none !important;
+  }
+  
+  .brand-title,
+  .tagline,
+  .hero-logo,
+  .goggles-image,
+  .coming-soon {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .coming-soon:hover,
+  .hero-logo:hover,
+  .goggles-image:hover {
+    transform: none;
+  }
+}

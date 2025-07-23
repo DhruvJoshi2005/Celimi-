@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+python-dotenv
+motor
+bcrypt
+python-jose[cryptography]

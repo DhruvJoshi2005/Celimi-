@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.email-form {
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: relative;
+}
+
+.email-form form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(37, 37, 229, 0.8); 
+  border-radius: 50px;
+  padding: 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Simple sliding line animation around the border */
+.email-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(90deg, 
+      transparent 0%, 
+      #666699 25%, 
+      #9999cc 50%, 
+      #666699 75%, 
+      transparent 100%);
+  background-size: 200% 100%;
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: moveLine 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveLine {
+  0% {
+      background-position: -100% 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
+}
+
+.email-form:hover form {
+  border-color: rgba(102, 102, 153, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 102, 153, 0.3);
+}
+
+.email-form input {
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #273485;
+  font-size: 14px;
+  min-width: 0;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.email-form input:focus {
+  opacity: 1;
+}
+
+.email-form input::placeholder {
+  color: rgba(102, 102, 153, 0.7);
+  transition: color 0.3s ease;
+}
+
+.email-form input:focus::placeholder {
+  color: rgba(102, 102, 153, 0.5);
+}
+
+.email-form button {
+  position: relative;
+  padding: 10px 36px;
+  background-color: white;
+  color: #273485;
+  border: 2px solid rgba(102, 102, 153, 0.9); 
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.email-form button:hover {
+  background-color: rgba(102, 102, 153, 1);
+  color: white;
+  border-color: rgba(102, 102, 153, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 102, 153, 0.4);
+}
+
+.email-form button:active {
+  transform: translateY(-1px);
+  transition: transform 0.1s;
+}
+
+/* Status message styling */
+.email-form .status-message {
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Loading state */
+.email-form.loading button {
+  position: relative;
+  color: transparent;
+}
+
+.email-form.loading button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .email-form {
+      max-width: 700px;
+      margin-top: 50px;
+  }
+  
+  .email-form input {
+      font-size: 16px;
+      padding: 14px 24px;
+  }
+  
+  .email-form button {
+      padding: 12px 40px;
+      font-size: 16px;
+  }
+}
+
+.email-form::before {
+  padding: 5px;
+}
+
+/* Desktop */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .email-form {
+      max-width: 650px;
+      margin-top: 45px;
+  }
+  
+  .email-form input {
+      font-size: 15px;
+      padding: 13px 22px;
+  }
+  
+  .email-form button {
+      padding: 11px 38px;
+      font-size: 15px;
+  }
+}
+
+.email-form::before {
+  padding: 5px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .email-form {
+      max-width: 500px;
+      margin-top: 35px;
+  }
+  
+  .email-form form {
+      padding: 5px 8px;
+  }
+  
+  .email-form input {
+      font-size: 14px;
+      padding: 10px 18px;
+  }
+  
+  .email-form button {
+      padding: 9px 30px;
+      font-size: 14px;
+  }
+}
+
+.email-form::before {
+  padding: 10px;
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) and (min-width: 481px) {
+  .email-form {
+      max-width: 450px;
+      margin-top: 30px;
+  }
+  
+  .email-form form {
+      padding: 4px 6px;
+  }
+  
+  .email-form input {
+      font-size: 13px;
+      padding: 8px 15px;
+  }
+  
+  .email-form button {
+      padding: 8px 25px;
+      font-size: 13px;
+  }
+}
+.email-form::before {
+  padding: 10px;
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .email-form {
+      margin-top: 25px;
+      max-width: 100%;
+      padding: 8px 15px;
+  }
+  
+  .email-form form {
+      display: flex;
+      flex-direction: row;
+      padding: 4px 6px;
+      border-radius: 30px;
+      gap: 0;
+  }
+  
+  .email-form input {
+      flex: 1;
+      padding: 10px 15px;
+      font-size: 12px;
+      border: none;
+      background: transparent;
+      color: #666699;
+      min-width: 0;
+  }
+  
+  .email-form input::placeholder {
+      color: rgba(102, 102, 153, 0.7);
+  }
+  
+  .email-form button {
+      padding: 8px 20px;
+      font-size: 12px;
+      border-radius: 25px;
+      white-space: nowrap;
+      flex-shrink: 0;
+  }
+}
+.email-form::before {
+  padding: 15px;
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+  .email-form {
+      margin-top: 20px;
+      padding: 0 5px;
+  }
+  
+  .email-form form {
+      padding: 3px 5px;
+      border-radius: 25px;
+  }
+  
+  .email-form input {
+      padding: 8px 12px;
+      font-size: 11px;
+  }
+  
+  .email-form button {
+      padding: 6px 15px;
+      font-size: 11px;
+      border-radius: 20px;
+  }
+}
+.email-form::before {
+  padding: 15px;
+}
