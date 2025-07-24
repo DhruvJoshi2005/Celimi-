@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import logo from "../assets/celimi.png";
+import logo from "../assets/logo_smalltext.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""} ${isVisible ? "visible" : ""}`}>
+    <header
+      className={`header ${isScrolled ? "scrolled" : ""} ${
+        isVisible ? "visible" : ""
+      }`}
+    >
       <div className="logo-section">
         {/* ✅ Logo links to home */}
         <Link to="/">
@@ -38,7 +42,9 @@ const Header = () => {
       </div>
 
       <div className="about-us-section">
-        <Link to="/about-us" className="about-us-link">About Us</Link>
+        <Link to="/about-us" className="about-us-link">
+          About Us
+        </Link>
       </div>
     </header>
   );

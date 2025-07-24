@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import EmailForm from "./components/EmailForm";
 import Footer from "./components/Footer";
 import WaveLines from "./components/wavelines";
-
+import logoImage from "./assets/logo_smalltext.png";
 import aiLensImage from "./assets/ai_lens2.png";
 import AboutUs from "./pages/AboutUs"; // ✅ Add this
 
@@ -23,7 +23,7 @@ function HomePage() {
         <h1 className="brand-title">Coming Soon</h1>
 
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/ec7b73e1942488082aabffd4e01bb277db3a2173?width=482"
+          src={logoImage}
           alt="Celimi Logo"
           className="hero-logo"
         />
