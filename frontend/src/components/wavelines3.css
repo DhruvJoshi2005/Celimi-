@@ -1,0 +1,260 @@
+.wave-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6b6b6b 0%, #8a8a8a 25%, #b5b5b5 50%, #757575 75%, #4a4a4a 100%);
+  overflow: hidden;
+  z-index: -10;
+}
+
+.wave-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wave path animations - intersecting patterns with different delays */
+.wave-path-1 {
+  animation: 
+    wave-translate-1 4s infinite linear,
+    wave-morph-1 2.5s infinite ease-in-out;
+}
+
+.wave-path-2 {
+  animation: 
+    wave-translate-2 3.5s infinite linear,
+    wave-morph-2 3s infinite ease-in-out 0.3s;
+}
+
+.wave-path-3 {
+  animation: 
+    wave-translate-3 4.5s infinite linear,
+    wave-morph-3 3.5s infinite ease-in-out 0.6s;
+}
+
+.wave-path-4 {
+  animation: 
+    wave-translate-4 4.25s infinite linear,
+    wave-morph-4 2.75s infinite ease-in-out 0.9s;
+}
+
+.wave-path-5 {
+  animation: 
+    wave-translate-5 4.75s infinite linear,
+    wave-morph-5 3.25s infinite ease-in-out 1.2s;
+}
+
+.wave-path-6 {
+  animation: 
+    wave-translate-6 5s infinite linear,
+    wave-morph-6 3.75s infinite ease-in-out 1.5s;
+}
+
+.wave-path-7 {
+  animation: 
+    wave-translate-7 5.5s infinite linear,
+    wave-morph-7 2.25s infinite ease-in-out 1.8s;
+}
+
+.wave-path-8 {
+  animation: 
+    wave-translate-8 5.25s infinite linear,
+    wave-morph-8 4s infinite ease-in-out 2.1s;
+}
+
+.wave-path-9 {
+  animation: 
+    wave-translate-9 5.75s infinite linear,
+    wave-morph-9 4.25s infinite ease-in-out 2.4s;
+}
+
+.wave-path-10 {
+  animation: 
+    wave-translate-10 3.8s infinite linear,
+    wave-morph-10 2.8s infinite ease-in-out 0.5s;
+}
+
+.wave-path-11 {
+  animation: 
+    wave-translate-11 4.3s infinite linear,
+    wave-morph-11 3.3s infinite ease-in-out 1.0s;
+}
+
+.wave-path-12 {
+  animation: 
+    wave-translate-12 4.8s infinite linear,
+    wave-morph-12 2.6s infinite ease-in-out 1.7s;
+}
+
+/* Translation animations - more compact horizontal flow */
+@keyframes wave-translate-1 {
+  0% { transform: translate(-150px, 0) scaleX(0.9); }
+  25% { transform: translate(-50px, 0) scaleX(1.1); }
+  50% { transform: translate(100px, 0) scaleX(1); }
+  75% { transform: translate(200px, 0) scaleX(1.05); }
+  100% { transform: translate(-150px, 0) scaleX(0.9); }
+}
+
+@keyframes wave-translate-2 {
+  0% { transform: translate(-120px, 0) scaleX(1.05); }
+  30% { transform: translate(0px, 0) scaleX(0.95); }
+  60% { transform: translate(150px, 0) scaleX(1.15); }
+  100% { transform: translate(-120px, 0) scaleX(1.05); }
+}
+
+@keyframes wave-translate-3 {
+  0% { transform: translate(-100px, 0) scaleX(0.95); }
+  40% { transform: translate(50px, 0) scaleX(1.2); }
+  80% { transform: translate(175px, 0) scaleX(0.85); }
+  100% { transform: translate(-100px, 0) scaleX(0.95); }
+}
+
+@keyframes wave-translate-4 {
+  0% { transform: translate(-175px, 0) scaleX(1.1); }
+  35% { transform: translate(-25px, 0) scaleX(0.9); }
+  70% { transform: translate(125px, 0) scaleX(1.25); }
+  100% { transform: translate(-175px, 0) scaleX(1.1); }
+}
+
+@keyframes wave-translate-5 {
+  0% { transform: translate(-140px, 0) scaleX(0.85); }
+  20% { transform: translate(-40px, 0) scaleX(1.05); }
+  50% { transform: translate(90px, 0) scaleX(1.15); }
+  80% { transform: translate(160px, 0) scaleX(0.95); }
+  100% { transform: translate(-140px, 0) scaleX(0.85); }
+}
+
+@keyframes wave-translate-6 {
+  0% { transform: translate(-200px, 0) scaleX(1); }
+  33% { transform: translate(-50px, 0) scaleX(1.2); }
+  66% { transform: translate(100px, 0) scaleX(0.8); }
+  100% { transform: translate(-200px, 0) scaleX(1); }
+}
+
+@keyframes wave-translate-7 {
+  0% { transform: translate(-160px, 0) scaleX(1.15); }
+  45% { transform: translate(25px, 0) scaleX(0.9); }
+  90% { transform: translate(140px, 0) scaleX(1.05); }
+  100% { transform: translate(-160px, 0) scaleX(1.15); }
+}
+
+@keyframes wave-translate-8 {
+  0% { transform: translate(-190px, 0) scaleX(0.95); }
+  25% { transform: translate(-75px, 0) scaleX(1.1); }
+  75% { transform: translate(110px, 0) scaleX(1.2); }
+  100% { transform: translate(-190px, 0) scaleX(0.95); }
+}
+
+@keyframes wave-translate-9 {
+  0% { transform: translate(-130px, 0) scaleX(1.05); }
+  50% { transform: translate(75px, 0) scaleX(0.85); }
+  100% { transform: translate(-130px, 0) scaleX(1.05); }
+}
+
+/* Additional intersecting wave translations */
+@keyframes wave-translate-10 {
+  0% { transform: translate(-110px, 0) scaleX(1.2); }
+  30% { transform: translate(20px, 0) scaleX(0.8); }
+  70% { transform: translate(130px, 0) scaleX(1.1); }
+  100% { transform: translate(-110px, 0) scaleX(1.2); }
+}
+
+@keyframes wave-translate-11 {
+  0% { transform: translate(-170px, 0) scaleX(0.9); }
+  40% { transform: translate(10px, 0) scaleX(1.3); }
+  80% { transform: translate(145px, 0) scaleX(0.7); }
+  100% { transform: translate(-170px, 0) scaleX(0.9); }
+}
+
+@keyframes wave-translate-12 {
+  0% { transform: translate(-145px, 0) scaleX(1.1); }
+  35% { transform: translate(-15px, 0) scaleX(0.95); }
+  65% { transform: translate(115px, 0) scaleX(1.25); }
+  100% { transform: translate(-145px, 0) scaleX(1.1); }
+}
+
+/* Additional intersecting wave morphs */
+@keyframes wave-morph-10 {
+  0% { d: path("M-200 375 Q300 450 500 350 Q700 250 900 375 Q1100 500 1300 325"); }
+  50% { d: path("M-200 395 Q350 300 550 425 Q750 550 950 350 Q1150 200 1300 425"); }
+  100% { d: path("M-200 375 Q300 450 500 350 Q700 250 900 375 Q1100 500 1300 325"); }
+}
+
+@keyframes wave-morph-11 {
+  0% { d: path("M-200 425 Q250 350 475 475 Q725 350 925 450 Q1125 550 1300 375"); }
+  40% { d: path("M-200 450 Q325 500 525 400 Q775 300 975 475 Q1175 600 1300 350"); }
+  80% { d: path("M-200 400 Q275 400 450 425 Q700 450 875 400 Q1075 350 1300 400"); }
+  100% { d: path("M-200 425 Q250 350 475 475 Q725 350 925 450 Q1125 550 1300 375"); }
+}
+
+@keyframes wave-morph-12 {
+  0% { d: path("M-200 365 Q400 300 600 450 Q800 600 1000 340 Q1200 280 1300 480"); }
+  35% { d: path("M-200 385 Q450 500 650 330 Q850 180 1050 465 Q1250 650 1300 320"); }
+  70% { d: path("M-200 405 Q350 380 550 420 Q750 460 950 380 Q1150 340 1300 440"); }
+  100% { d: path("M-200 365 Q400 300 600 450 Q800 600 1000 340 Q1200 280 1300 480"); }
+}
+
+/* Morphing animations - intersecting wave patterns */
+@keyframes wave-morph-1 {
+  0% { d: path("M-200 360 Q200 340 400 380 Q600 420 800 360 Q1000 320 1200 380"); }
+  25% { d: path("M-200 380 Q250 400 450 360 Q650 320 850 380 Q1050 420 1200 340"); }
+  50% { d: path("M-200 370 Q300 320 500 400 Q700 440 900 350 Q1100 310 1200 390"); }
+  75% { d: path("M-200 350 Q220 380 420 340 Q620 380 820 400 Q1020 360 1200 320"); }
+  100% { d: path("M-200 360 Q200 340 400 380 Q600 420 800 360 Q1000 320 1200 380"); }
+}
+
+@keyframes wave-morph-2 {
+  0% { d: path("M-200 380 Q250 360 450 400 Q650 440 850 380 Q1050 340 1200 400"); }
+  33% { d: path("M-200 400 Q300 420 500 360 Q700 320 900 410 Q1100 450 1200 370"); }
+  66% { d: path("M-200 390 Q200 340 400 420 Q600 460 800 370 Q1000 330 1200 410"); }
+  100% { d: path("M-200 380 Q250 360 450 400 Q650 440 850 380 Q1050 340 1200 400"); }
+}
+
+@keyframes wave-morph-3 {
+  0% { d: path("M-200 400 Q280 420 480 380 Q680 340 880 420 Q1080 460 1200 380"); }
+  40% { d: path("M-200 420 Q230 360 430 440 Q630 480 830 390 Q1030 350 1200 430"); }
+  80% { d: path("M-200 410 Q330 440 530 370 Q730 330 930 440 Q1130 480 1200 360"); }
+  100% { d: path("M-200 400 Q280 420 480 380 Q680 340 880 420 Q1080 460 1200 380"); }
+}
+
+@keyframes wave-morph-4 {
+  0% { d: path("M-200 420 Q320 400 520 440 Q720 480 920 420 Q1120 380 1200 440"); }
+  30% { d: path("M-200 440 Q270 480 470 400 Q670 360 870 450 Q1070 490 1200 410"); }
+  70% { d: path("M-200 430 Q370 360 570 470 Q770 510 970 390 Q1170 350 1200 460"); }
+  100% { d: path("M-200 420 Q320 400 520 440 Q720 480 920 420 Q1120 380 1200 440"); }
+}
+
+@keyframes wave-morph-5 {
+  0% { d: path("M-200 440 Q350 420 550 460 Q750 500 950 440 Q1150 400 1200 460"); }
+  50% { d: path("M-200 460 Q300 500 500 420 Q700 380 900 470 Q1100 510 1200 430"); }
+  100% { d: path("M-200 440 Q350 420 550 460 Q750 500 950 440 Q1150 400 1200 460"); }
+}
+
+@keyframes wave-morph-6 {
+  0% { d: path("M-200 460 Q380 440 580 480 Q780 520 980 460 Q1180 420 1200 480"); }
+  35% { d: path("M-200 480 Q330 520 530 440 Q730 400 930 490 Q1130 530 1200 450"); }
+  65% { d: path("M-200 470 Q430 400 630 510 Q830 550 1030 430 Q1230 390 1200 500"); }
+  100% { d: path("M-200 460 Q380 440 580 480 Q780 520 980 460 Q1180 420 1200 480"); }
+}
+
+@keyframes wave-morph-7 {
+  0% { d: path("M-200 480 Q400 460 600 500 Q800 540 1000 480 Q1200 440 1200 500"); }
+  45% { d: path("M-200 500 Q350 540 550 460 Q750 420 950 510 Q1150 550 1200 470"); }
+  100% { d: path("M-200 480 Q400 460 600 500 Q800 540 1000 480 Q1200 440 1200 500"); }
+}
+
+@keyframes wave-morph-8 {
+  0% { d: path("M-200 390 Q420 370 620 410 Q820 450 1020 390 Q1220 350 1200 410"); }
+  25% { d: path("M-200 410 Q370 450 570 370 Q770 330 970 420 Q1170 460 1200 380"); }
+  75% { d: path("M-200 400 Q470 330 670 440 Q870 480 1070 360 Q1270 320 1200 430"); }
+  100% { d: path("M-200 390 Q420 370 620 410 Q820 450 1020 390 Q1220 350 1200 410"); }
+}
+
+@keyframes wave-morph-9 {
+  0% { d: path("M-200 430 Q450 410 650 450 Q850 490 1050 430 Q1250 390 1200 450"); }
+  60% { d: path("M-200 450 Q400 490 600 410 Q800 370 1000 460 Q1200 500 1200 420"); }
+  100% { d: path("M-200 430 Q450 410 650 450 Q850 490 1050 430 Q1250 390 1200 450"); }
+}

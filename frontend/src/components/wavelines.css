@@ -1,3 +1,4 @@
+
 .wave-container {
   position: fixed;
   top: 0;
@@ -16,62 +17,65 @@
   height: 100%;
 }
 
-/* Wave path animations */
+
+
 .wave-path-1 {
   animation: 
-    wave-translate-1 8s infinite linear,
-    wave-morph-1 5s infinite ease-in-out;
+  wave-translate-1 8s infinite linear,
+  wave-morph-1 5s infinite ease-in-out;
 }
 
 .wave-path-2 {
   animation: 
-    wave-translate-2 7s infinite linear,
-    wave-morph-2 6s infinite ease-in-out;
+  wave-translate-2 7s infinite linear,
+  wave-morph-2 6s infinite ease-in-out;
 }
 
 .wave-path-3 {
   animation: 
-    wave-translate-3 9s infinite linear,
-    wave-morph-3 7s infinite ease-in-out;
+  wave-translate-3 9s infinite linear,
+  wave-morph-3 7s infinite ease-in-out;
 }
 
 .wave-path-4 {
   animation: 
-    wave-translate-4 8.5s infinite linear,
-    wave-morph-4 5.5s infinite ease-in-out;
+  wave-translate-4 8.5s infinite linear,
+  wave-morph-4 5.5s infinite ease-in-out;
 }
 
 .wave-path-5 {
   animation: 
-    wave-translate-5 9.5s infinite linear,
-    wave-morph-5 6.5s infinite ease-in-out;
+  wave-translate-5 9.5s infinite linear,
+  wave-morph-5 6.5s infinite ease-in-out;
 }
 
 .wave-path-6 {
   animation: 
-    wave-translate-6 10s infinite linear,
-    wave-morph-6 7.5s infinite ease-in-out;
+  wave-translate-6 10s infinite linear,
+  wave-morph-6 7.5s infinite ease-in-out;
 }
 
 .wave-path-7 {
   animation: 
-    wave-translate-7 11s infinite linear,
-    wave-morph-7 4.5s infinite ease-in-out;
+  wave-translate-7 11s infinite linear,
+  wave-morph-7 4.5s infinite ease-in-out;
 }
 
 .wave-path-8 {
   animation: 
-    wave-translate-8 10.5s infinite linear,
-    wave-morph-8 8s infinite ease-in-out;
+  wave-translate-8 10.5s infinite linear,
+  wave-morph-8 8s infinite ease-in-out;
 }
 
 .wave-path-9 {
   animation: 
-    wave-translate-9 11.5s infinite linear,
-    wave-morph-9 8.5s infinite ease-in-out;
+  wave-translate-9 11.5s infinite linear,
+  wave-morph-9 8.5s infinite ease-in-out;
 }
 
-/* Translation animations */
+
+
+ 
 @keyframes wave-translate-1 {
   0%, 100% { transform: translate(-200px, 0); }
   50% { transform: translate(200px, 0); }
@@ -117,7 +121,9 @@
   50% { transform: translate(240px, 0); }
 }
 
-/* Morphing animations */
+
+
+
 @keyframes wave-morph-1 {
   0%, 100% { d: path("M-100 250 Q150 200 400 280 T800 250 Q1000 230 1300 280"); }
   50% { d: path("M-100 270 Q150 180 400 300 T800 270 Q1000 210 1300 300"); }
@@ -161,4 +167,5 @@
 @keyframes wave-morph-9 {
   0%, 100% { d: path("M-100 420 Q550 370 850 470 T1450 420 Q1650 400 1700 450"); }
   50% { d: path("M-100 440 Q550 350 850 490 T1450 440 Q1650 380 1700 470"); }
-}
+ } 
+ 

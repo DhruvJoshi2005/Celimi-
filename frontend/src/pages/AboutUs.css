@@ -1,0 +1,123 @@
+.about-us-content {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  background-color: #C0BFC1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+.about-us-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #273485;
+}
+
+.about-us-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333333;
+  white-space: pre-line;
+}
+
+/* 🌐 Large Desktop (WQHD/4K) */
+@media (min-width: 1441px) {
+  .about-us-content {
+    max-width: 1000px;
+    padding: 3rem 4rem;
+  }
+
+  .about-us-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-us-content p {
+    font-size: 1.3rem;
+  }
+}
+
+/* 💻 Standard Desktop (Full HD) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .about-us-content {
+    max-width: 800px;
+    padding: 2.5rem 3rem;
+  }
+
+  .about-us-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-us-content p {
+    font-size: 1.15rem;
+  }
+}
+
+/* 💻 Small Desktop / Large Tablet Landscape */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .about-us-content {
+    padding: 2rem 2.5rem;
+    max-width: 700px;
+}
+
+.about-us-content h1 {
+    font-size: 2.4rem;
+}
+
+.about-us-content p {
+    font-size: 1.1rem;
+}
+}
+
+/* 📱 Tablets Portrait */
+@media (min-width: 601px) and (max-width: 900px) {
+    .about-us-content {
+      max-width: 600px;
+    /* padding: 1.8rem 1.5rem; */
+    /* margin: 3rem 5rem; */
+  }
+
+  .about-us-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-us-content p {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mobile Landscape */
+@media (min-width: 481px) and (max-width: 600px) {
+  .about-us-content {
+    max-width: 500px;
+    padding: 1.5rem 1.2rem;
+    /* margin: 2rem 1rem; */
+  }
+
+  .about-us-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-us-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Small Mobile Portrait (iPhone SE, older Android) */
+@media (max-width: 480px) {
+  .about-us-content {
+    padding: 1.2rem 0.8rem;
+    /* margin: 2rem 0.5rem; */
+    max-width: 300px;
+  }
+
+  .about-us-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-us-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}

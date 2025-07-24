@@ -1,5 +1,5 @@
 import React from 'react';
-import './waveLines.css';
+import './waveLines2.css';
 
 const OrganicWaveLines = () => {
   return (

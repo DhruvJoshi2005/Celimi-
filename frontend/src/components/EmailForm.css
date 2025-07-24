@@ -14,9 +14,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(216, 212, 212, 0.95);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(37, 37, 229, 0.8); 
+  border: 2px solid #273485; 
   border-radius: 50px;
   padding: 10px 10px;
   width: 100%;
@@ -269,7 +269,6 @@
   .email-form {
       margin-top: 25px;
       max-width: 100%;
-      padding: 8px 15px;
   }
   
   .email-form form {

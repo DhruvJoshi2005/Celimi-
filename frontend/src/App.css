@@ -65,7 +65,7 @@ body::before {
   width: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, #4ecdc4, #45b7d1, #4ecdc4, transparent);
-  animation: expandLine 1.5s ease-out 1.5s forwards;
+  /* animation: expandLine 1.5s ease-out 1.5s forwards; */
   box-shadow: 0 0 10px rgba(78, 205, 196, 0.6);
 }
 
@@ -106,7 +106,7 @@ body::before {
   width: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
-  animation: expandLineLeft 1s ease-out 2s forwards;
+  /* animation: expandLineLeft 1s ease-out 2s forwards; */
 }
 
 .tagline::after {
@@ -118,7 +118,7 @@ body::before {
   width: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
-  animation: expandLineRight 1s ease-out 2s forwards;
+  /* animation: expandLineRight 1s ease-out 2s forwards; */
 }
 
 /* Goggles Container and Animation */
