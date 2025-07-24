@@ -14,7 +14,8 @@ app = FastAPI()
 # Allow CORS for React frontend (adjust port if needed)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React dev server
+    allow_origins=["http://localhost:5173",
+                "http://celimi-frontend.s3-website.ap-south-1.amazonaws.com/"],  # React dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
