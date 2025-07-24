@@ -15,7 +15,7 @@ const EmailForm = () => {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     try {
-      const response = await fetch("http://localhost:8000/subscribe", {
+      const response = await fetch("https://celimi.onrender.com/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
