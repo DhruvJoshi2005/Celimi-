@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fastapi-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://dhruvjoshi0205:vI5zXqidb9o2yyGE@shopcluster.ynwzcis.mongodb.net/?retryWrites=true&w=majority&appName=ShopCluster
+    plan: free

@@ -2,30 +2,30 @@ import React from "react";
 import "./Footer.css";
 // Import the social media icons
 import instagramIcon from '../assets/black_insta.png';
-import facebookIcon from '../assets/Facebook_Symbol_1.png';
-import youtubeIcon from '../assets/black_yt.png';
+// import facebookIcon from '../assets/Facebook_Symbol_1.png';
+// import youtubeIcon from '../assets/black_yt.png';
 
 const Footer = () => {
   // Social media links
   const socialLinks = [
     {
-      href: "https://www.instagram.com/_dhruvjoshi_/",
+      href: "https://www.instagram.com/celimi.ai/",
       icon: instagramIcon,
       alt: "Instagram",
       name: "instagram"
     },
-    {
-      href: "#",
-      icon: facebookIcon,
-      alt: "Facebook",
-      name: "facebook"
-    },
-    {
-      href: "#",
-      icon: youtubeIcon,
-      alt: "YouTube",
-      name: "youtube"
-    }
+    // {
+    //   href: "#",
+    //   icon: facebookIcon,
+    //   alt: "Facebook",
+    //   name: "facebook"
+    // },
+    // {
+    //   href: "#",
+    //   icon: youtubeIcon,
+    //   alt: "YouTube",
+    //   name: "youtube"
+    // }
   ];
 
   const handleSocialClick = (socialName, href) => {
@@ -44,8 +44,8 @@ const Footer = () => {
         <h4>CONTACT US</h4>
         <div className="contact-info">
           <p> kansightsvision@gmail.com</p>
-          <p> +1 (555) 123-4567</p>
-          <p> 123 Main Street, City, State 12345</p>
+          {/* <p> +1 (555) 123-4567</p>
+          <p> 123 Main Street, City, State 12345</p> */}
         </div>
       </div>
       

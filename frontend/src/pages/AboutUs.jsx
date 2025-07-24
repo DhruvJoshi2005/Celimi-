@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header"; // Optional: Show header here too
-import Footer from "../components/Footer"; // Optional: Reuse footer if needed
-import "./AboutUs.css"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
@@ -9,8 +9,50 @@ const AboutUs = () => {
       <Header />
 
       <main className="about-us-content">
-        <h1>About Us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quidem omnis voluptas odio atque dolor! Dolorum expedita nihil mollitia. Ipsam quod illo delectus, adipisci facere, a mollitia quos, provident enim quidem veritatis nisi. Illo fuga voluptates, illum optio eum exercitationem repellendus tempore ipsam iure autem, cum provident eveniet fugit dolor? Tempora, eligendi! Corrupti voluptates est quae tempore velit natus optio sed nostrum placeat libero laboriosam pariatur nobis fugit provident officiis, reiciendis sapiente labore! Repellat adipisci blanditiis ab placeat quibusdam! Commodi, dignissimos blanditiis? Nobis corporis enim dolores sapiente odio dignissimos repellat, quas debitis necessitatibus? Eum magnam ipsum deserunt dolor et quaerat vel facere accusantium consectetur voluptatem accusamus alias eaque obcaecati amet eos optio iste, recusandae earum architecto assumenda beatae, asperiores quod exercitationem blanditiis. Debitis ipsa labore aspernatur enim harum id. Aliquam commodi eligendi nostrum ad dicta culpa facere accusantium sequi optio provident. Sed impedit quis quo ducimus? Numquam quod inventore ipsum asperiores aliquid eum repellat quisquam in rerum quis minima nemo dolorem optio, recusandae deleniti! Et quo quam, explicabo nulla sit error sunt minus veritatis saepe eos velit! Laboriosam quisquam eum amet nesciunt saepe deleniti voluptatem modi voluptates ad iusto? Placeat, omnis neque dignissimos ratione quasi eaque, fuga voluptatibus quae a nulla deleniti rerum, tempora eos soluta earum obcaecati? Facere, unde atque? Ratione quisquam animi porro maiores dolorum. Earum nihil ad explicabo inventore nulla nisi ut sunt illo quibusdam, eos excepturi corrupti et quaerat labore praesentium tenetur culpa sint. Cumque numquam corrupti, fuga modi est, sunt accusantium impedit, commodi neque suscipit asperiores aspernatur at? Optio harum quis cum minima maxime voluptates vel ducimus voluptatem ratione animi enim quos, sit rem, possimus ut quasi ad quia impedit! Harum consectetur maxime quam nobis tempore minima in. Commodi libero esse, ratione vel error id dignissimos numquam fuga harum hic sit saepe magni eius eveniet vitae in magnam cumque rem dolores accusamus. Natus amet vel distinctio totam, nisi magni quae delectus ipsa perferendis ullam expedita, non qui modi dignissimos ratione iusto in, nulla aperiam voluptatum quidem eius a fuga repellat aspernatur. Vel natus laboriosam reprehenderit, animi quae, debitis amet quis maiores excepturi, nihil quos. Quam incidunt porro provident repellat pariatur facilis, explicabo aut ratione quo non recusandae odio dignissimos, cupiditate, molestiae eaque quidem laboriosam? Beatae commodi ab nisi distinctio asperiores in quaerat repellat id quidem quam voluptatum, autem adipisci facilis odio deserunt sit dolorem aspernatur illo voluptatem vel tenetur incidunt architecto possimus. Ea, quos rem!        </p>
+        <h1 sty>About Celimi</h1>
+
+        <h2>See the Future One Frame at a Time</h2>
+        <p>
+          At Celimi, we believe eyewear should do more than protect your eyes.
+          It should enhance your life. That’s why we’ve reimagined sunglasses as
+          intelligent, stylish companions that combine advanced AI technology
+          with everyday functionality.
+        </p>  
+        <p>
+          Our AI-powered sunglasses offer features like real-time navigation,
+          voice assistance, and contextual information—designed to keep you
+          connected, informed, and hands-free throughout your day.
+        </p>
+
+        <h2>Our Vision</h2>
+        <p>
+          To redefine eyewear by integrating intelligence, style, and seamless
+          connectivity into a single wearable experience.
+        </p>
+
+        <h2>What Makes Celimi Unique</h2>
+
+        <h3>AI Integration</h3>
+        <p>
+          Smart voice commands, real-time updates, and intelligent assistance on the go.
+        </p>
+
+        <h3>Design-Driven</h3>
+        <p>
+          Sleek, lightweight frames built for everyday wear, combining technology with fashion.
+        </p>
+
+        <h3>Effortless Connectivity</h3>
+        <p>
+          Connect to your devices smoothly and stay in control without looking at a screen.
+        </p>
+
+        <h2>Why We Created Celimi</h2>
+        <p>
+          We imagined a world where wearable technology is elegant, intuitive, and truly useful.
+          Celimi brings that vision to life with a perfect blend of innovation and style
+          that fits naturally into your lifestyle.
+        </p>
       </main>
 
       <Footer />
